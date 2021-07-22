@@ -31,7 +31,7 @@ function fetchUser() {
 }
 
 fetchUser().then(function(response) {
-  response.address
+  response.address.city;
 });
 
 function startApp() {
