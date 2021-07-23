@@ -29,7 +29,23 @@ logMessage(100);
 // }
 
 // intersection Type
-var neverUser: string & number & boolean;
+// var neverUser: string & number & boolean;
+
+// interface Developer {
+//     name: string;
+//     skill: string;
+// }
+
+// interface Person {
+//     name: string;
+//     age: number
+// }
+
+// function askeSomeone(someone: Developer & Person) {
+//     someone.name;
+//     someone.age;
+//     someone.skill;
+// }
 
 interface Developer {
     name: string;
@@ -41,8 +57,13 @@ interface Person {
     age: number
 }
 
-function askeSomeone(someone: Developer & Person) {
-    someone.name;
-    someone.age;
-    someone.skill;
+function askeSomeoneUnion(someone: Developer | Person) {
 }
+
+function askeSomeoneIntersection(someone: Developer & Person) {    
+}
+
+askeSomeoneUnion({ name: 'developer', skill: 'web'})
+askeSomeoneUnion({ name: 'developer', age: 100})
+
+askeSomeoneIntersection({ name: 'developer', age: 100, skill: 'web'})
